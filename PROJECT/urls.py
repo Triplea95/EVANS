@@ -22,6 +22,6 @@ from books.views import list_books,retrieve_single_book, delete_book
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("all/", list_books),
-    path("all/<int:id_from_the_web>/", retrieve_single_book),
+    path("all/<int:id_from_the_web>/", retrieve_single_book, name="retrieve-single-book"),
     path("all/<int:id_from_the_web>/delete/", delete_book)
 ]
