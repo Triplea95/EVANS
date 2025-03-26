@@ -8,7 +8,7 @@ def list_books(request):
 
 def retrieve_single_book(request, id_from_the_web):
     book = Books.objects.get(id=id_from_the_web)
-    return render(request, 'books/single_book.html', {'book': book})
+    return render(request, 'books/single_books.html', {'book': book})
 
 def delete_book(request, id_from_the_web):
     book = Books.objects.get(id=id_from_the_web)
